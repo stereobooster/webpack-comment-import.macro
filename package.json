@@ -1,0 +1,45 @@
+{
+  "name": "webpack-comment-import.macro",
+  "description": "babel macro for automatic generation of webpackChunkName component",
+  "version": "0.1.0",
+  "main": "dist/webpack-comment-import.macro.js",
+  "license": "MIT",
+  "files": ["dist/"],
+  "keywords": [
+    "webpack",
+    "babel",
+    "babel-macros",
+    "babel-plugin-macros"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stereobooster/webpack-comment-import.macro.git"
+  },
+  "scripts": {
+    "test": "jest --coverage",
+    "format": "prettier --write",
+    "ci": "npm run test -- --ci && npm run build",
+    "prepare": "npm run build",
+    "build": "microbundle -i src/index.js -o dist",
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+    "babel-plugin-macros": "^2.2.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-tester": "^5.0.0",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^22.3.0",
+    "prettier": "^1.10.2",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.0",
+    "microbundle": "^0.4.3"
+  },
+  "jest": {
+    "testRegex": "__tests__/.*.test.js$"
+  },
+  "lint-staged": {
+    "*.{js,md}": ["prettier --write", "git add -A"]
+  }
+}

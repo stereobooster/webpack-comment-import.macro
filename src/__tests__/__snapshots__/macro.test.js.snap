@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`macros no usage: no usage 1`] = `
+"
+import wcImport from \\"../macro\\";
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+
+"
+`;
