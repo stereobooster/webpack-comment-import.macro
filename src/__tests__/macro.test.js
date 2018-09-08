@@ -14,5 +14,9 @@ pluginTester({
   },
   tests: {
     "no usage": `import wcImport from "../macro";`,
+    "basic usage": `
+      import wcImport from "../macro";
+      const asyncModule = wcImport("./MyComponent");
+    `,
   },
 });
